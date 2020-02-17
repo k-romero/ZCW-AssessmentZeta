@@ -10,7 +10,19 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        int indexCount = 0;
+        Integer[] buffer = new Integer[ints.length];
+        for (Integer n: ints) {
+            if(n % 2 != 0){
+                buffer[indexCount] = n;
+                indexCount++;
+            }
+        }
+        Integer[] result = new Integer[indexCount];
+        for (int i = 0; i < indexCount ; i++) {
+            result[i] = buffer[i];
+        }
+        return result;
     }
 
     /**
@@ -19,7 +31,19 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int indexCount = 0;
+        Integer[] buffer = new Integer[ints.length];
+        for (Integer n: ints) {
+            if(n % 2 == 0){
+                buffer[indexCount] = n;
+                indexCount++;
+            }
+        }
+        Integer[] result = new Integer[indexCount];
+        for (int i = 0; i < indexCount ; i++) {
+            result[i] = buffer[i];
+        }
+        return result;
     }
 
     /**
@@ -28,7 +52,19 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int indexCount = 0;
+        Integer[] buffer = new Integer[ints.length];
+        for (Integer n: ints) {
+            if(n % 3 != 0){
+                buffer[indexCount] = n;
+                indexCount++;
+            }
+        }
+        Integer[] result = new Integer[indexCount];
+        for (int i = 0; i < indexCount ; i++) {
+            result[i] = buffer[i];
+        }
+        return result;
     }
 
     /**
@@ -38,6 +74,18 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        int indexCount = 0;
+        Integer[] buffer = new Integer[ints.length];
+        for (Integer n: ints) {
+            if(n % multiple != 0){
+                buffer[indexCount] = n;
+                indexCount++;
+            }
+        }
+        Integer[] result = new Integer[indexCount];
+        for (int i = 0; i < indexCount ; i++) {
+            result[i] = buffer[i];
+        }
+        return result;
     }
 }
