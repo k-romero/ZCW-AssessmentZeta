@@ -8,14 +8,17 @@ import java.util.Arrays;
  */
 public class PetOwner {
     private String name;
-    public ArrayList<Pet> pets = new ArrayList<>();
+    public ArrayList<Pet> pets;
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
-//        this.pets = pets;
+////        this.pets = new ArrayList<>();
+////        for (Pet n: pets) {
+////            this.pets.add(n);
+//        }
     }
 
     /**
