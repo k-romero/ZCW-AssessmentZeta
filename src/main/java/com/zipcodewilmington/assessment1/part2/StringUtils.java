@@ -11,7 +11,7 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        return sentence.split( " ");
     }
 
 
@@ -21,7 +21,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] temp = sentence.split( " ");
+        return temp[0];
     }
 
     /**
@@ -30,7 +31,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String firstWord = getFirstWord(sentence);
+        String result = "";
+        for (int i = firstWord.length()-1; i >= 0; i--) {
+            result += firstWord.charAt(i);
+        }
+        return result;
     }
 
     /**
@@ -39,7 +45,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String resultTemp = reverseFirstWord(sentence);
+        String result = resultTemp.substring(0,1).toUpperCase()+resultTemp.substring(1);
+        return result;
     }
 
 
@@ -50,7 +58,14 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) != str.charAt(index)){
+                result += str.charAt(i);
+            }
+        }
+
+        return result;
     }
 
 }
