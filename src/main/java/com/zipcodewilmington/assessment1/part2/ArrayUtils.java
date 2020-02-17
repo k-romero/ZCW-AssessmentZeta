@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -51,7 +53,26 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+        int count = 1;
+        int tempCount;
+        Integer mostCommon = (Integer) objectArray[0];
+        Integer temp = 0;
+        for (int i = 0; i < (objectArray.length - 1); i++)
+        {
+            temp = (Integer) objectArray[i];
+            tempCount = 0;
+            for (int j = 1; j < objectArray.length; j++)
+            {
+                if (temp == objectArray[j])
+                    tempCount++;
+            }
+            if (tempCount > count)
+            {
+                mostCommon = temp;
+                count = tempCount;
+            }
+        }
+        return mostCommon;
     }
 
 
