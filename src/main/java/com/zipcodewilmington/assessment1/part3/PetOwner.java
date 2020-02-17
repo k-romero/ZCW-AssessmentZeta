@@ -1,20 +1,20 @@
 package com.zipcodewilmington.assessment1.part3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
     private String name;
-    private ArrayList<Pet> pets;
+    private volatile ArrayList<Pet> pets ;
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
-        this.pets = new ArrayList<>();
     }
 
     /**
