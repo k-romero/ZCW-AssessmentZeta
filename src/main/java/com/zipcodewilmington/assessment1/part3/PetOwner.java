@@ -15,7 +15,7 @@ public class PetOwner {
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
-        this.pets.addAll(Arrays.asList(pets));
+//        this.pets = pets;
     }
 
     /**
