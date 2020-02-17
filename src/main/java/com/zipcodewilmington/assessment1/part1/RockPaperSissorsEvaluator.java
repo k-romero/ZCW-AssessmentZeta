@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import java.awt.print.Paper;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -13,7 +15,16 @@ public class RockPaperSissorsEvaluator {
      * @return the respective winning move
      */
     public String getWinningMove(String handSign) {
-        return null;
+        String result = "";
+        if ((handSign == ROCK)){
+            result = PAPER;
+        } else if (handSign == PAPER){
+            result = SCISSOR;
+        } else {
+            result = ROCK;
+        }
+
+        return result;
     }
 
     /**
@@ -21,7 +32,16 @@ public class RockPaperSissorsEvaluator {
      * @return the respective losing move
      */
     public String getLosingMove(String handSign) {
-        return null;
+        String result = "";
+        if ((handSign == ROCK)){
+            result = SCISSOR;
+        } else if (handSign == PAPER){
+            result = ROCK;
+        } else {
+            result = PAPER;
+        }
+
+        return result;
     }
 
     /**
@@ -30,6 +50,15 @@ public class RockPaperSissorsEvaluator {
      * @return a string representative of the winning hand sign between the two players
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
-        return null;
+        String result = "";
+        String losingmove = getLosingMove(handSignOfPlayer1);
+
+        if(handSignOfPlayer2 == losingmove){
+            result = handSignOfPlayer1;
+        } else {
+            result = handSignOfPlayer1;
+        }
+
+        return result;
     }
 }
