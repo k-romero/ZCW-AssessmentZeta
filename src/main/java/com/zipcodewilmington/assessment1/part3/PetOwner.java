@@ -8,13 +8,14 @@ import java.util.Arrays;
  */
 public class PetOwner {
     private String name;
-    private volatile ArrayList<Pet> pets ;
+    public ArrayList<Pet> pets = new ArrayList<>();
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
+        this.pets.addAll(Arrays.asList(pets));
     }
 
     /**
